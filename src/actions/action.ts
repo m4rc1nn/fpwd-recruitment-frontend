@@ -30,6 +30,7 @@ export async function changeCurrency(
             data: response.data.transaction,
         };
     } catch (error) {
+        console.log(error);
         return {
             success: false,
             error: "Server error",
