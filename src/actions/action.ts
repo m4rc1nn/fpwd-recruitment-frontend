@@ -1,6 +1,7 @@
 "use server";
 
 import axiosInstance from "@/lib/axios";
+import { Transaction } from "@/models/Transaction";
 
 export async function changeCurrency(
     previousState: {

@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { useEffect, useState } from "react";
 import axiosInstance from "@/lib/axios";
 import { HistoryIcon } from "lucide-react";
+import { Transaction } from "@/models/Transaction";
 
 export default function HistoryBox() {
 

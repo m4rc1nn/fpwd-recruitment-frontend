@@ -1,4 +1,4 @@
-type Transaction = {
+export type Transaction = {
     amountEUR: number;
     amountPLN: number;
     rate: number;
