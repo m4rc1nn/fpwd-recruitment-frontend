@@ -1,5 +1,5 @@
 import ExchangeBox from "@/components/ExchangeBox";
-import HistoryBox from "@/components/HistoryBox";
+// import HistoryBox from "@/components/HistoryBox";
 
 export default function Home() {
 
