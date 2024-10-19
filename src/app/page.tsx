@@ -4,7 +4,7 @@ import ExchangeBox from "@/components/ExchangeBox";
 export default function Home() {
 
   return (
-    <div className="container mx-auto max-w-2xl py-10">
+    <div className="container flex flex-col items-center justify-center h-screen mx-auto max-w-2xl py-10">
       <ExchangeBox />
       {/* <HistoryBox /> */}
     </div>
