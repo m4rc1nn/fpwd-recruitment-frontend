@@ -11,7 +11,7 @@ export async function changeCurrency(
     },
     formData: FormData
 ) {
-    if (formData.get("eurAmount") === null) {
+    if (!formData.get("eurAmount") || formData.get("eurAmount")?.toString().trim() === "" || parseFloat(formData.get("eurAmount") as string) < 0) {
         return {
             success: false,
             error: "Invalid number",
@@ -30,7 +30,6 @@ export async function changeCurrency(
             data: response.data.transaction,
         };
     } catch (error) {
-        console.log(error);
         return {
             success: false,
             error: "Server error",

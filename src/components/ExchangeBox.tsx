@@ -19,10 +19,14 @@ export default function ExchangeBox() {
             const response = await axiosInstance.get("/exchange-rate");
             setCurrentRate(response.data.exchange_rate??0);
         })();
+    }, []);
+
+    useEffect(() => {
+        setCurrentRate(data.data?.rate ?? 0);
     }, [data]);
 
     return (
-        <div className="max-w-md mx-auto p-6 bg-card rounded-lg shadow-lg">
+        <div className="w-full max-w-md mx-auto p-6 bg-card rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-6 text-center">EUR to PLN Converter</h2>
             <form action={action}>
                 <div className="space-y-4">

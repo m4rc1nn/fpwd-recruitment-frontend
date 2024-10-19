@@ -19,7 +19,7 @@ export default function HistoryBox() {
 
         const fetchInterval = setInterval(async () => {
             getTransactions();
-        }, 1000);
+        }, 5000);
 
         getTransactions();
         return () => clearInterval(fetchInterval);
@@ -29,7 +29,7 @@ export default function HistoryBox() {
         <Card className="w-full max-w-md mx-auto mt-12">
             <CardHeader>
                 <div className="flex justify-between items-center">
-                    <CardTitle className="text-xl font-semibold">Exchange history</CardTitle>
+                    <CardTitle className="text-xl font-semibold">Global exchange history</CardTitle>
                 </div>
             </CardHeader>
             <CardContent>
