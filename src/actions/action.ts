@@ -29,11 +29,10 @@ export async function changeCurrency(
             error: null,
             data: response.data.transaction,
         };
-    } catch (error) {
-        console.log(error);
+    } catch (error: any) {
         return {
             success: false,
-            error: "Server error",
+            error: error.response.data.error,
             data: null,
         };
     }
